@@ -20,6 +20,16 @@
    // 处理发表文章的逻辑
  })
 
- router.get('/:postId')
+ router.get('/edit/:postId', checkLogin, function(req, res, next) {
+   res.send('返回更新文章页面')
+ })
+
+ router.post('/edit/:postId', checkLogin, function(req, res, next) {
+   res.send('更新文章内容逻辑')
+ })
+
+ router.get('/remove/:postId', checkLogin, function(req, res, next) {
+   res.send('删除文章')
+ })
 
  module.exports = router

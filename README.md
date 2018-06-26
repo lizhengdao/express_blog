@@ -84,3 +84,5 @@ trim_trailing_whitespace = false  # 不删除每一行多余得空格
 [Makefile]
 indent_style = tab
 ```
+
+针对路由的设计应该都作为注释写到`routes/index.js`中，方便维护和代码编写。
