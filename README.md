@@ -86,3 +86,6 @@ indent_style = tab
 ```
 
 针对路由的设计应该都作为注释写到`routes/index.js`中，方便维护和代码编写。
+注意一下`ejs`模板里面的变量，虽然最后都是挂载到`res.local`上，`blog`变量挂载到`app.locals`下，将`user`、`success`、`error`挂载到`res.locals`下
+在`express`框架中最后还是要把上面说的都`merge`到模板中，从而可以直接使用，但是优先级是`res.locals`>`app.locals`, 前者是每次请求都可能有变化的量
+

@@ -7,7 +7,7 @@
  const checkLogin = require('../middlewares/check').checkLogin
 
  router.get('/', function(req, res, next) {
-   res.send('主页')
+   res.render('posts')
    // 处理某一个特定用户的参数@todo
  })
 
